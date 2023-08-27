@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Interpolación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Ejemplo de interpolación</h1>
+  <ion-item>
+    <h3>El nombre del cliente: {{nombre}} {{apellido}} </h3>
+  </ion-item>
+  <h3>El nombre del cliente 2 es: {{persona.nombre}} {{persona.apellido}}</h3>
+  <ion-item>
+    <h3>El texto duplicado es: {{duplicarTexto('Duoc UC')}}</h3>
+  </ion-item>
+
+  <ion-button expand="block" (click)="irLogin()">Ir a Login<ion-icon slot="start" name="log-in-outline"></ion-icon></ion-button>
+</ion-content>
