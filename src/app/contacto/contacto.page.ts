@@ -22,6 +22,9 @@ export class ContactoPage implements OnInit {
     return texto+' '+texto;
   }
 
+  usuario = '';
+  pass = '';
+
   irLogin(){
     this.router.navigate(['/login']);
   }
