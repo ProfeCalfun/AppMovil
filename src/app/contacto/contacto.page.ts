@@ -14,8 +14,8 @@ export class ContactoPage implements OnInit {
   apellido = 'Calfún';
 
   persona = {
-    nombre: 'Cecilia',
-    apellido: 'Patiño',
+    nombre: 'Juan',
+    apellido: 'Ferrer',
   }
 
   duplicarTexto(texto:string){
