@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.page.html',
@@ -22,11 +23,9 @@ export class ContactoPage implements OnInit {
     return texto+' '+texto;
   }
 
-  usuario = '';
-  pass = '';
-
   irLogin(){
     this.router.navigate(['/login']);
+    
   }
   
   ngOnInit() {
