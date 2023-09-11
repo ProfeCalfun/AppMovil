@@ -12,16 +12,16 @@
   <form>
     <ion-item lines="full">
       <ion-label position="floating">Usuario</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" [(ngModel)]="user.username" name="username" minLength="3" maxLength="8" required></ion-input>
     </ion-item>
     <ion-item lines="full">
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password" [(ngModel)]="user.password" name="password" inputmode="numeric" pattern="[0-9]*" maxLength="4" minLength="4" required></ion-input>
     </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block" [routerLink]="['/contacto']">Ingresar</ion-button>
-        <a [routerLink]="['/home']" class="small-text">¿Olvidó su contraseña?</a>
+        <ion-button type="submit" color="danger" expand="block" (click)="irLogin()">Ingresar</ion-button>
+        <a  class="small-text">¿Olvidó su contraseña?</a>
       </ion-col>
     </ion-row>
   </form>

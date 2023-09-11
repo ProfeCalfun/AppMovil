@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,11 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  usuario: any;
 
-  constructor(private router: Router){}
-
-  irLogin(){
-    this.router.navigate(['/login'])
+  constructor(private router: Router, private activeroute: ActivatedRoute) {
+    this.activeroute.queryParams.subscribe((params) => {
+      if (this.router.getCurrentNavigation()?.extras.state) {
+        this.usuario =
+          this.router.getCurrentNavigation()?.extras.state?.['username'];
+        console.log(this.usuario);
+      }
+    });
   }
-  
+
+  ngOnInit() {}
 }
