@@ -1,26 +1,28 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="ion-text-center">Home
-      
-    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+      <ion-title class="ion-text-center">PRINCIPAL</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-    <img src="assets/img/logo.png" alt="" widt>
- <ion-item>
-  <h1 >Bienvenido: {{usuario}}</h1>
- </ion-item>
-      <ion-button expand="block"><ion-icon slot="start" name="enter-outline"></ion-icon>INGRESARA
-      </ion-button>
- 
-      <ion-button expand="block">
-        <ion-icon slot="start" name="create-outline"></ion-icon>CREAR CUENTA
-      </ion-button>
-       
-  </ion-content>
+  <img src="assets/img/logo.png" alt="" />
+  <ion-item>
+    <h1>Bienvenido: {{usuario}}</h1>
+  </ion-item>
+  <ion-button expand="block" [routerLink]="['/registro']"
+    ><ion-icon slot="start" name="enter-outline"></ion-icon>IR PÁGINA
+  </ion-button>
 
-  <ion-footer>
-    <h2 class="ion-text-center"><ion-icon name="logo-reddit" size="large"></ion-icon></h2>
-  </ion-footer>
-  
+  <ion-button expand="block">
+    <ion-icon slot="start" name="create-outline"></ion-icon>CREAR CUENTA
+  </ion-button>
+</ion-content>
+
+<ion-footer>
+  <h2 class="ion-text-center">
+    <ion-icon name="logo-reddit" size="large"></ion-icon>
+  </h2>
+</ion-footer>

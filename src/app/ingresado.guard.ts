@@ -14,26 +14,22 @@ import { Observable } from 'rxjs';
 })
 export class IngresadoGuard implements CanActivate {
 
-  usuario: any;
+  
+  constructor(private router: Router, private activeroute: ActivatedRoute) { }
 
-  constructor(private router: Router, private activeroute: ActivatedRoute) {
-    this.activeroute.queryParams.subscribe((params) => {
-      if (this.router.getCurrentNavigation()?.extras.state) {
-        this.usuario =
-          this.router.getCurrentNavigation()?.extras.state?.['username'];
-        console.log(this.usuario);
-      }
-    });
+  user={
+    username: "",
+    password: "",
   }
 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ):
-    | Observable<boolean | UrlTree>
+  ):| Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
+
     return true;
   }
 }

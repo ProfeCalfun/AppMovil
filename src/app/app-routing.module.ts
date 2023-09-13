@@ -12,15 +12,18 @@ const routes: Routes = [
     path: '',
     redirectTo: 'login',
     pathMatch: 'full',
+    canActivate:[NoIngresadoGuard]
   },
 
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
+    canActivate:[NoIngresadoGuard]
   },
   {
     path: 'registro',
-    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule),
+    canActivate:[NoIngresadoGuard]
   },
 
 ];
