@@ -31,6 +31,7 @@ export class HomePage {
 
   ionViewWillEnter() {
     console.log('ionViewWillEnter');
+    
   }
 
   ionViewDidEnter() {

@@ -27,7 +27,7 @@ export class NoIngresadoGuard implements CanActivate {
     | boolean
     | UrlTree {
     
-        return false;
+        return true;
      
    
   }
