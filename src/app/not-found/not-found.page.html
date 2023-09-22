@@ -1,7 +1,22 @@
-<ion-header [translucent]="true">
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+        <ion-title class="ion-text-center">NOT FOUND</ion-title>
+    </ion-toolbar>
+  </ion-header>
   
-</ion-header>
-
-<ion-content [fullscreen]="true">
+  <ion-content class="ion-padding">
+    <img src="assets/img/error.jpeg" alt="" />
+    <ion-item>
+      <h1>ERROR 404</h1>
+    </ion-item>
+  </ion-content>
   
-</ion-content>
+  <ion-footer>
+    <h2 class="ion-text-center">
+      <ion-icon name="logo-reddit" size="large"></ion-icon>
+    </h2>
+  </ion-footer>
+  
