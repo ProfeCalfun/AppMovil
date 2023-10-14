@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Servicio Api Rest</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <table border="1px">
+    <ng-container *ngFor="let post of arrayPosts">
+    <tr>
+      <td>{{post.title}}</td>
+      <td>{{post.body}}</td>
+    </tr>
+    </ng-container>
+  </table>
+
+</ion-content>

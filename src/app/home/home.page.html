@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-      <ion-title class="ion-text-center">PRINCIPAL</ion-title>
+    <ion-title class="ion-text-center">PRINCIPAL</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,13 +12,18 @@
   <ion-item>
     <h1>Bienvenido: {{usuario}}</h1>
   </ion-item>
-  <ion-button expand="block" [routerLink]="['/registro']"
-    ><ion-icon slot="start" name="enter-outline"></ion-icon>IR PÁGINA
+  <ion-button expand="block" [routerLink]="['/registro']">
+    <ion-icon slot="start" name="enter-outline"></ion-icon>IR PÁGINA
   </ion-button>
 
   <ion-button expand="block">
     <ion-icon slot="start" name="create-outline"></ion-icon>CREAR CUENTA
   </ion-button>
+  
+  <ion-button expand="block" (click)="enviarDatos()">
+    <ion-icon name="send-outline"></ion-icon>ENVIAR DATO
+  </ion-button>
+  
 </ion-content>
 
 <ion-footer>

@@ -28,17 +28,12 @@ export class LoginPage implements OnInit {
   }
 
   irLogin(){
-    // Aquí puedes agregar la lógica de autenticación
-    // Por ejemplo, puedes verificar si el email y la contraseña son válidos
     if (this.user.username === 'fcalfun' && this.user.password === '1234') {
-      // El inicio de sesión fue exitoso, puedes redirigir a otra página
-      // O realizar otras acciones necesarias
       console.log('Inicio de sesión exitoso');
       const navigationExtras:NavigationExtras={state:
         {username:this.user.username}}
         this.router.navigate(['/home'],navigationExtras);
     } else {
-      // El inicio de sesión falló, muestra un mensaje de error o realiza otras acciones necesarias
       console.error('Inicio de sesión fallido');
       this.ingresoIncorrecto();
       

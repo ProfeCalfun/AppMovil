@@ -33,6 +33,6 @@ export class NoIngresadoGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    return true;
+    return false;
   }
 }
