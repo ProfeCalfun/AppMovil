@@ -30,11 +30,17 @@ const routes: Routes = [
     loadChildren: () => import('./api/api.module').then( m => m.ApiPageModule)
   },
   {
+    path: 'camera',
+    loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
+  },
+
+  {
     path: '**',
     component: NotFoundPage,
     loadChildren: () =>
       import('./not-found/not-found.module').then((m) => m.NotFoundPageModule),
   },
+  
  
 
 ];

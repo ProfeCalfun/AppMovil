@@ -9,12 +9,12 @@ import { retry, catchError } from 'rxjs/operators';
 })
 export class ApiServiceService {
 
-  url = 'https://jsonplaceholder.typicode.com/posts';
+  url = 'https://jsonplaceholder.typicode.com';
 
   constructor(public http: HttpClient) { }
 
   getPosts():Observable<any>{
-    return this.http.get(this.url);  
+    return this.http.get(this.url+'/posts');  
   }
 
   getPost(id:number):Observable<any>{

@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Capturar QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Capturar QR</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="header">
+    <video id="videoElement" width="400" height="300" autoplay></video>
+    <ion-button (click)="tomarImagen()">Obtener QR</ion-button>
+    <canvas id="canvas" width="400" height="300"></canvas>
+  </div>
+</ion-content>
